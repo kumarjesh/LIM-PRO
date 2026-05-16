@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import Camera from "./components/Camera";
 import MlSelector from "./components/MlSelector";
 import VerdictCard from "./components/VerdictCard";

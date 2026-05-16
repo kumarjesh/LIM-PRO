@@ -67,7 +67,7 @@ export function exportWeeklyReport() {
     lines.push(`  Total: ${dayCal} kcal`, "");
   });
 
-  lines.push("=" .repeat(36));
+  lines.push("=".repeat(36));
   lines.push(`WEEK TOTAL: ${totalCal} kcal | Sugar: ${totalSugar.toFixed(1)}g`);
   lines.push(`✅ GREEN: ${green}  ⚠️ YELLOW: ${yellow}  🚫 RED: ${red}`);
 
