@@ -11,7 +11,7 @@ export function getTodayLog() {
 export function addToLog(entry) {
   try {
     const log = getTodayLog();
-    log.unshift(entry); // newest first
+    log.unshift(entry);
     localStorage.setItem(TODAY_KEY(), JSON.stringify(log.slice(0, 50)));
   } catch {}
 }
@@ -46,7 +46,7 @@ export function getWeekLog() {
 export function exportWeeklyReport() {
   const week = getWeekLog();
   let totalCal = 0, totalSugar = 0, green = 0, yellow = 0, red = 0;
-  const lines = ["LIM PRO — WEEKLY DRINK REPORT", "=" .repeat(36), ""];
+  const lines = ["LIM PRO — WEEKLY DRINK REPORT", "=".repeat(36), ""];
 
   week.forEach(({ date, log }) => {
     if (log.length === 0) return;
@@ -79,3 +79,4 @@ export function exportWeeklyReport() {
   a.click();
   URL.revokeObjectURL(url);
 }
+
